@@ -4,6 +4,7 @@ const BottomButtons = props => {
   return (
     <section className="buttons">
       <button
+        className="downButton"
         onClick={() => {
           if (props.down < 4) {
             props.setDown(props.down + 1);
@@ -13,6 +14,7 @@ const BottomButtons = props => {
         Down
       </button>
       <button
+        className="quarterButton"
         onClick={() => {
           if (props.quarter < 4) {
             props.setQuarter(props.quarter + 1);
