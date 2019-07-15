@@ -30,7 +30,11 @@ function App() {
       </section>
       <section className="buttons">
         <button
-          onClick={() => setQuarter(quarter + 1)}
+          onClick={() => {
+            if (quarter < 4) {
+              setQuarter(quarter + 1);
+            }
+          }}
           className="quarterButton"
         >
           Quarter
