@@ -48,8 +48,10 @@
 .ballOn__title,
 .quarter__title {
   text-transform: uppercase;
-  font-size: 3rem;
-  padding: 2rem;
+  font-size: 2.3rem;
+  text-align: center;
+  width: 100px;
+  padding: 1.5rem;
 }
 
 .home__score,
@@ -132,9 +134,3 @@
   width: 175px;
   border-radius: 4px;
 }
-
-/* .homeButtons .homeButtons__touchdown {
-  background-color: white;
-  border: 2px solid blue;
-  color: blue;
-} */
