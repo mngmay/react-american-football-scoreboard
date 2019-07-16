@@ -10,7 +10,8 @@ function App() {
   const [homeScore, setHomeScore] = useState(0);
   const [awayScore, setAwayScore] = useState(0);
   const [quarter, setQuarter] = useState(1);
-  const [down, setDown] = useState(1);
+  const [down, setDown] = useState(0);
+  const [isActive, setActive] = useState(false);
 
   return (
     <div className="container">
@@ -33,6 +34,8 @@ function App() {
         setQuarter={setQuarter}
         down={down}
         setDown={setDown}
+        isActive={isActive}
+        setActive={setActive}
       />
     </div>
   );

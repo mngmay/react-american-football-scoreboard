@@ -23,6 +23,10 @@ const BottomButtons = props => {
       >
         Quarter
       </button>
+
+      {/* <button className="startButton" onClick={() => toggle()}>
+        Start Game
+      </button> */}
     </section>
   );
 };
