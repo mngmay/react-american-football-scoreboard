@@ -1,21 +1,13 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 
-const Timer = () => {
-  const [minutes, setMinutes] = useState(15);
-  const [tenSeconds, setTenSeconds] = useState(0);
-  const [seconds, setSeconds] = useState(0);
-  const [isActive, setIsActive] = useState(false);
-
-  function toggle() {
-    setIsActive(!isActive);
-  }
-
-  function reset() {
-    setSeconds(0);
-    setTenSeconds(0);
-    setMinutes(0);
-    setIsActive(false);
-  }
+const Timer = props => {
+  const isActive = props.isActive;
+  const seconds = props.seconds;
+  const setSeconds = props.setSeconds;
+  const minutes = props.minutes;
+  const setMinutes = props.setMinutes;
+  const tenSeconds = props.tenSeconds;
+  const setTenSeconds = props.setTenSeconds;
 
   useEffect(() => {
     let interval = null;
@@ -47,11 +39,12 @@ const Timer = () => {
     if (seconds === 0 && tenSeconds === 0 && minutes === "0" + 0) {
       clearInterval(interval);
     }
+
     return () => clearInterval(interval);
-  }, [isActive, seconds]);
+  });
 
   return (
-    <div className="timer" onClick={() => toggle()}>
+    <div className="timer">
       {minutes}:{tenSeconds}
       {seconds}
     </div>
