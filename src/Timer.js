@@ -1,13 +1,15 @@
 import React, { useEffect } from "react";
 
 const Timer = props => {
-  const isActive = props.isActive;
-  const seconds = props.seconds;
-  const setSeconds = props.setSeconds;
-  const minutes = props.minutes;
-  const setMinutes = props.setMinutes;
-  const tenSeconds = props.tenSeconds;
-  const setTenSeconds = props.setTenSeconds;
+  const {
+    isActive,
+    seconds,
+    setSeconds,
+    minutes,
+    setMinutes,
+    tenSeconds,
+    setTenSeconds
+  } = props;
 
   useEffect(() => {
     let interval = null;
