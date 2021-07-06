@@ -5,7 +5,7 @@
 
 .scoreboard {
   width: 58%;
-  margin: 10rem auto;
+  margin: 6rem auto;
   background-color: #0b5402;
   color: white;
   border-radius: 0.5rem;
@@ -48,8 +48,10 @@
 .ballOn__title,
 .quarter__title {
   text-transform: uppercase;
-  font-size: 3rem;
-  padding: 2rem;
+  font-size: 2.3rem;
+  text-align: center;
+  width: 100px;
+  padding: 1.5rem;
 }
 
 .home__score,
@@ -107,16 +109,32 @@
 }
 
 .buttons {
-  width: 50%;
+  width: 65%;
   margin: 0 auto;
   display: flex;
   justify-content: space-around;
+  display: flex;
+}
+
+.homeButtons,
+.awayButtons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 20%;
 }
 
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
-.awayButtons__fieldGoal {
+.awayButtons__fieldGoal,
+.downButton,
+.quarterButton,
+.startButton,
+.resetButton {
   margin: 1rem;
+  width: 175px;
   border-radius: 4px;
 }
